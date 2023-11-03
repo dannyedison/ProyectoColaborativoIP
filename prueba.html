@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -304,84 +305,142 @@
                             900: '#3e2723',
                         },
                     },
+                    spacing: {
+                        '7': '1.75rem',
+                        '9': '2.25rem',
+                        '28': '7rem',
+                        '80': '20rem',
+                        '96': '24rem',
+                    },
+                    height: {
+                        '1/2': '50%',
+                    },
+                    scale: {
+                        '30': '.3',
+                    },
+                    boxShadow: {
+                        outline: '0 0 0 3px rgba(101, 31, 255, 0.4)',
+                    },
                 }
+
             }
         }
-        
-    </script>
 
+    </script>
 </head>
 
 <body>
-
-    <header class="p-4 dark:bg-gray-800 dark:text-gray-100">
-        <div class="container flex justify-between h-16 mx-auto">
-            <a rel="noopener noreferrer" href="#" aria-label="Back to homepage" class="flex items-center p-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32"
-                    class="w-8 h-8 dark:text-violet-400">
-                    <path
-                        d="M27.912 7.289l-10.324-5.961c-0.455-0.268-1.002-0.425-1.588-0.425s-1.133 0.158-1.604 0.433l0.015-0.008-10.324 5.961c-0.955 0.561-1.586 1.582-1.588 2.75v11.922c0.002 1.168 0.635 2.189 1.574 2.742l0.016 0.008 10.322 5.961c0.455 0.267 1.004 0.425 1.59 0.425 0.584 0 1.131-0.158 1.602-0.433l-0.014 0.008 10.322-5.961c0.955-0.561 1.586-1.582 1.588-2.75v-11.922c-0.002-1.168-0.633-2.189-1.573-2.742zM27.383 21.961c0 0.389-0.211 0.73-0.526 0.914l-0.004 0.002-10.324 5.961c-0.152 0.088-0.334 0.142-0.53 0.142s-0.377-0.053-0.535-0.145l0.005 0.002-10.324-5.961c-0.319-0.186-0.529-0.527-0.529-0.916v-11.922c0-0.389 0.211-0.73 0.526-0.914l0.004-0.002 10.324-5.961c0.152-0.090 0.334-0.143 0.53-0.143s0.377 0.053 0.535 0.144l-0.006-0.002 10.324 5.961c0.319 0.185 0.529 0.527 0.529 0.916z">
-                    </path>
-                    <path
-                        d="M22.094 19.451h-0.758c-0.188 0-0.363 0.049-0.515 0.135l0.006-0.004-4.574 2.512-5.282-3.049v-6.082l5.282-3.051 4.576 2.504c0.146 0.082 0.323 0.131 0.508 0.131h0.758c0.293 0 0.529-0.239 0.529-0.531v-0.716c0-0.2-0.11-0.373-0.271-0.463l-0.004-0.002-5.078-2.777c-0.293-0.164-0.645-0.26-1.015-0.26-0.39 0-0.756 0.106-1.070 0.289l0.010-0.006-5.281 3.049c-0.636 0.375-1.056 1.055-1.059 1.834v6.082c0 0.779 0.422 1.461 1.049 1.828l0.009 0.006 5.281 3.049c0.305 0.178 0.67 0.284 1.061 0.284 0.373 0 0.723-0.098 1.027-0.265l-0.012 0.006 5.080-2.787c0.166-0.091 0.276-0.265 0.276-0.465v-0.716c0-0.293-0.238-0.529-0.529-0.529z">
-                    </path>
-                </svg>
-            </a>
-            <ul class="items-stretch hidden space-x-3 lg:flex">
-                <li class="flex">
-                    <a rel="noopener noreferrer" href="index.html"
-                        class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent dark:text-violet-400 dark:border-violet-400">A
-                        cerca de</a>
-                </li>
-                <li class="flex">
-                    <a rel="noopener noreferrer" href="#"
-                        class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">planes</a>
-                </li>
-                <li class="flex">
-                    <a rel="noopener noreferrer" href="#"
-                        class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Link</a>
-                </li>
-                <li class="flex">
-                    <a rel="noopener noreferrer" href="#"
-                        class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Link</a>
-                </li>
-            </ul>
-            <div class="items-center flex-shrink-0 hidden lg:flex">
-                <button class="self-center px-8 py-3 rounded">Sign in</button>
-
-                <button class="self-center px-8 py-3 font-semibold rounded dark:bg-violet-400 dark:text-gray-900">Sign
-                    up</button>
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+            <div>
+                <p
+                    class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+                    Brand new
+                </p>
             </div>
-            <button class="p-4 lg:hidden">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                    class="w-6 h-6 dark:text-gray-100">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
-                </svg>
-            </button>
-        </div>
-    </header>
+            <h2
+                class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+                <span class="relative inline-block">
+                    <svg viewBox="0 0 52 24" fill="currentColor"
+                        class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
+                        <defs>
+                            <pattern id="bc9273ce-29bb-4565-959b-714607d4d027" x="0" y="0" width=".135" height=".30">
+                                <circle cx="1" cy="1" r=".7"></circle>
+                            </pattern>
+                        </defs>
+                        <rect fill="url(#bc9273ce-29bb-4565-959b-714607d4d027)" width="52" height="24"></rect>
+                    </svg>
+                    <span class="relative">Conoce nuestros planes</span>
+                </span>
 
-    <section>
-        <div class="p-6 py-12 bg-red-200 text-gray-900">
-            <div class="container mx-auto">
-                <div class="flex flex-col lg:flex-row items-center justify-between">
-                    <h2 class="text-center text-6xl tracki font-bold">Up to
-                        <br class="sm:hidden">100% Off
-                    </h2>
-                    <div class="space-x-2 text-center py-2 lg:py-0">
-                        <span>Plus free shipping! Use code:</span>
-                        <span class="font-bold text-lg">prueba</span>
+            </h2>
+            <p class="text-base text-gray-700 md:text-lg">
+                Y prepárate a vivir la mejor experiencia de tu vida.
+            </p>
+        </div>
+        <div
+            class="grid max-w-md gap-10 row-gap-8 lg:max-w-screen-lg sm:row-gap-10 lg:grid-cols-3 xl:max-w-screen-lg sm:mx-auto">
+            <!--Plan1-->
+            <div class="flex flex-col transition duration-300 bg-white rounded shadow-sm hover:shadow">
+                <div class="relative w-full h-48">
+                    <img src="https://doradoplaza.com/imagenes/galeria_destino_cartagena_3.jpg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                        class="object-cover w-full h-full rounded-t" alt="Plan" />
+                </div>
+                <div class="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-b">
+                    <div>
+                        <div class="text-lg font-semibold">Cartagena de Indias</div>
+                        <p class="text-sm text-gray-900">
+                            Disfruta de sus playas y murallas
+                        </p>
+                        <div class="mt-1 mb-4 mr-1 text-4xl font-bold sm:text-3xl">Desde $950 USD</div>
                     </div>
-                    <a href="#" rel="noreferrer noopener"
-                        class="px-5 mt-4 lg:mt-0 py-3 rounded-md border block dark:bg-gray-50 dark:text-gray-900 dark:border-gray-400">Shop
-                        Now</a>
+                    <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-gray-400">
+                        <img src="imagenes/carro.png" alt="" width="10%">
+                        <img src="imagenes/tikete.png" alt="" width="10%">
+                        <img src="imagenes/asistencia-medica.png" alt="" width="10%">
+                        <img src="imagenes/hotel-p.png" alt="" width="10%">
+                    </div>
+                    <a href="/"
+                        class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">
+                        Ver planes
+                    </a>
+                </div>
+            </div>
+            <!--Plan 2-->
+            <div class="flex flex-col transition duration-300 bg-white rounded shadow-sm hover:shadow">
+                <div class="relative w-full h-48">
+                    <img src="https://trayectoriasenviaje.com/wp-content/uploads/2022/08/Guatape-18.jpg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                        class="object-cover w-full h-full rounded-t" alt="Plan" />
+                </div>
+                <div class="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-b">
+                    <div>
+                        <div class="text-lg font-semibold">Guatapé</div>
+                        <p class="text-sm text-gray-900">
+                            Conoce la piedra del Peñol y escala sus 780 escalas.
+                        </p>
+                        <div class="mt-1 mb-4 mr-1 text-4xl font-bold sm:text-3xl">Desde $28 USD</div>
+                    </div>
+                    <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-gray-400">
+                        <img src="imagenes/carro.png" alt="" width="10%">
+                        <!--<img src="imagenes/tikete.png" alt="" width="10%">-->
+                        <img src="imagenes/asistencia-medica.png" alt="" width="10%">
+                        <img src="imagenes/hotel-p.png" alt="" width="10%">
+                    </div>
+                    <a href="/"
+                        class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">
+                        Ver planes
+                    </a>
+                </div>
+            </div>
+            
+            <!--Plan1-->
+            <div class="flex flex-col transition duration-300 bg-white rounded shadow-sm hover:shadow">
+                <div class="relative w-full h-48">
+                    <img src="https://doradoplaza.com/imagenes/galeria_destino_cartagena_3.jpg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                        class="object-cover w-full h-full rounded-t" alt="Plan" />
+                </div>
+                <div class="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-b">
+                    <div>
+                        <div class="text-lg font-semibold">Cartagena de Indias</div>
+                        <p class="text-sm text-gray-900">
+                            Disfruta de sus playas y murallas
+                        </p>
+                        <div class="mt-1 mb-4 mr-1 text-4xl font-bold sm:text-3xl">Desde $950 USD</div>
+                    </div>
+                    <div class="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-gray-400">
+                        <img src="imagenes/carro.png" alt="" width="10%">
+                        <img src="imagenes/tikete.png" alt="" width="10%">
+                        <img src="imagenes/asistencia-medica.png" alt="" width="10%">
+                        <img src="imagenes/hotel-p.png" alt="" width="10%">
+                    </div>
+                    <a href="/"
+                        class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">
+                        Ver planes
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
-
-
+    </div>
 </body>
 
 </html>
