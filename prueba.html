@@ -1,45 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        red: {
+                            '50': '#ffebee',
+                            '100': '#ffcdd2',
+                            '200': '#ef9a9a',
+                            '300': '#e57373',
+                            '400': '#ef5350',
+                            '500': '#f44336',
+                            '600': '#e53935',
+                            '700': '#d32f2f',
+                            '800': '#c62828',
+                            '900': '#b71c1c',
+                            'accent-100': '#ff8a80',
+                            'accent-200': '#ff5252',
+                            'accent-400': '#ff1744',
+                            'accent-700': '#d50000',
+                        },
+                        purple: {
+                            50: '#f3e5f5',
+                            100: '#e1bee7',
+                            200: '#ce93d8',
+                            300: '#ba68c8',
+                            400: '#ab47bc',
+                            500: '#9c27b0',
+                            600: '#8e24aa',
+                            700: '#7b1fa2',
+                            800: '#6a1b9a',
+                            900: '#4a148c',
+                            'accent-100': '#ea80fc',
+                            'accent-200': '#e040fb',
+                            'accent-400': '#d500f9',
+                            'accent-700': '#aa00ff',
+                        },
+                        'deep-purple': {
+                            50: '#ede7f6',
+                            100: '#d1c4e9',
+                            200: '#b39ddb',
+                            300: '#9575cd',
+                            400: '#7e57c2',
+                            500: '#673ab7',
+                            600: '#5e35b1',
+                            700: '#512da8',
+                            800: '#4527a0',
+                            900: '#311b92',
+                            'accent-100': '#b388ff',
+                            'accent-200': '#7c4dff',
+                            'accent-400': '#651fff',
+                            'accent-700': '#6200ea',
+                        },
+                        teal: {
+                            50: '#e0f2f1',
+                            100: '#b2dfdb',
+                            200: '#80cbc4',
+                            300: '#4db6ac',
+                            400: '#26a69a',
+                            500: '#009688',
+                            600: '#00897b',
+                            700: '#00796b',
+                            800: '#00695c',
+                            900: '#004d40',
+                            'accent-100': '#a7ffeb',
+                            'accent-200': '#64ffda',
+                            'accent-400': '#1de9b6',
+                            'accent-700': '#00bfa5',
+                        },
+                        indigo: {
+                            50: '#e8eaf6',
+                            100: '#c5cae9',
+                            200: '#9fa8da',
+                            300: '#7986cb',
+                            400: '#5c6bc0',
+                            500: '#3f51b5',
+                            600: '#3949ab',
+                            700: '#303f9f',
+                            800: '#283593',
+                            900: '#1a237e',
+                            'accent-100': '#8c9eff',
+                            'accent-200': '#536dfe',
+                            'accent-400': '#3d5afe',
+                            'accent-700': '#304ffe',
+                        },
+                        pink: {
+                            50: '#fce4ec',
+                            100: '#f8bbd0',
+                            200: '#f48fb1',
+                            300: '#f06292',
+                            400: '#ec407a',
+                            500: '#e91e63',
+                            600: '#d81b60',
+                            700: '#c2185b',
+                            800: '#ad1457',
+                            900: '#880e4f',
+                            'accent-100': '#ff80ab',
+                            'accent-200': '#ff4081',
+                            'accent-400': '#f50057',
+                            'accent-700': '#c51162',
+                        },
+                        blue: {
+                            50: '#e3f2fd',
+                            100: '#bbdefb',
+                            200: '#90caf9',
+                            300: '#64b5f6',
+                            400: '#42a5f5',
+                            500: '#2196f3',
+                            600: '#1e88e5',
+                            700: '#1976d2',
+                            800: '#1565c0',
+                            900: '#0d47a1',
+                            'accent-100': '#82b1ff',
+                            'accent-200': '#448aff',
+                            'accent-400': '#2979ff',
+                            'accent-700': '#2962ff',
+                        },
+                        'light-blue': {
+                            50: '#e1f5fe',
+                            100: '#b3e5fc',
+                            200: '#81d4fa',
+                            300: '#4fc3f7',
+                            400: '#29b6f6',
+                            500: '#03a9f4',
+                            600: '#039be5',
+                            700: '#0288d1',
+                            800: '#0277bd',
+                            900: '#01579b',
+                            'accent-100': '#80d8ff',
+                            'accent-200': '#40c4ff',
+                            'accent-400': '#00b0ff',
+                            'accent-700': '#0091ea',
+                        },
+                        cyan: {
+                            50: '#e0f7fa',
+                            100: '#b2ebf2',
+                            200: '#80deea',
+                            300: '#4dd0e1',
+                            400: '#26c6da',
+                            500: '#00bcd4',
+                            600: '#00acc1',
+                            700: '#0097a7',
+                            800: '#00838f',
+                            900: '#006064',
+                            'accent-100': '#84ffff',
+                            'accent-200': '#18ffff',
+                            'accent-400': '#00e5ff',
+                            'accent-700': '#00b8d4',
+                        },
+                        gray: {
+                            50: '#fafafa',
+                            100: '#f5f5f5',
+                            200: '#eeeeee',
+                            300: '#e0e0e0',
+                            400: '#bdbdbd',
+                            500: '#9e9e9e',
+                            600: '#757575',
+                            700: '#616161',
+                            800: '#424242',
+                            900: '#212121',
+                        },
+                        'blue-gray': {
+                            50: '#eceff1',
+                            100: '#cfd8dc',
+                            200: '#b0bec5',
+                            300: '#90a4ae',
+                            400: '#78909c',
+                            500: '#607d8b',
+                            600: '#546e7a',
+                            700: '#455a64',
+                            800: '#37474f',
+                            900: '#263238',
+                        },
+                        green: {
+                            50: '#e8f5e9',
+                            100: '#c8e6c9',
+                            200: '#a5d6a7',
+                            300: '#81c784',
+                            400: '#66bb6a',
+                            500: '#4caf50',
+                            600: '#43a047',
+                            700: '#388e3c',
+                            800: '#2e7d32',
+                            900: '#1b5e20',
+                            'accent-100': '#b9f6ca',
+                            'accent-200': '#69f0ae',
+                            'accent-400': '#00e676',
+                            'accent-700': '#00c853',
+                        },
+                        'light-green': {
+                            50: '#f1f8e9',
+                            100: '#dcedc8',
+                            200: '#c5e1a5',
+                            300: '#aed581',
+                            400: '#9ccc65',
+                            500: '#8bc34a',
+                            600: '#7cb342',
+                            700: '#689f38',
+                            800: '#558b2f',
+                            900: '#33691e',
+                            'accent-100': '#ccff90',
+                            'accent-200': '#b2ff59',
+                            'accent-400': '#76ff03',
+                            'accent-700': '#64dd17',
+                        },
+                        lime: {
+                            50: '#f9fbe7',
+                            100: '#f0f4c3',
+                            200: '#e6ee9c',
+                            300: '#dce775',
+                            400: '#d4e157',
+                            500: '#cddc39',
+                            600: '#c0ca33',
+                            700: '#afb42b',
+                            800: '#9e9d24',
+                            900: '#827717',
+                            'accent-100': '#f4ff81',
+                            'accent-200': '#eeff41',
+                            'accent-400': '#c6ff00',
+                            'accent-700': '#aeea00',
+                        },
+                        amber: {
+                            50: '#fff8e1',
+                            100: '#ffecb3',
+                            200: '#ffe082',
+                            300: '#ffd54f',
+                            400: '#ffca28',
+                            500: '#ffc107',
+                            600: '#ffb300',
+                            700: '#ffa000',
+                            800: '#ff8f00',
+                            900: '#ff6f00',
+                            'accent-100': '#ffe57f',
+                            'accent-200': '#ffd740',
+                            'accent-400': '#ffc400',
+                            'accent-700': '#ffab00',
+                        },
+                        yellow: {
+                            50: '#fffde7',
+                            100: '#fff9c4',
+                            200: '#fff59d',
+                            300: '#fff176',
+                            400: '#ffee58',
+                            500: '#ffeb3b',
+                            600: '#fdd835',
+                            700: '#fbc02d',
+                            800: '#f9a825',
+                            900: '#f57f17',
+                            'accent-100': '#ffff8d',
+                            'accent-200': '#ffff00',
+                            'accent-400': '#ffea00',
+                            'accent-700': '#ffd600',
+                        },
+                        orange: {
+                            50: '#fff3e0',
+                            100: '#ffe0b2',
+                            200: '#ffcc80',
+                            300: '#ffb74d',
+                            400: '#ffa726',
+                            500: '#ff9800',
+                            600: '#fb8c00',
+                            700: '#f57c00',
+                            800: '#ef6c00',
+                            900: '#e65100',
+                            'accent-100': '#ffd180',
+                            'accent-200': '#ffab40',
+                            'accent-400': '#ff9100',
+                            'accent-700': '#ff6d00',
+                        },
+                        'deep-orange': {
+                            50: '#fbe9e7',
+                            100: '#ffccbc',
+                            200: '#ffab91',
+                            300: '#ff8a65',
+                            400: '#ff7043',
+                            500: '#ff5722',
+                            600: '#f4511e',
+                            700: '#e64a19',
+                            800: '#d84315',
+                            900: '#bf360c',
+                            'accent-100': '#ff9e80',
+                            'accent-200': '#ff6e40',
+                            'accent-400': '#ff3d00',
+                            'accent-700': '#dd2c00',
+                        },
+                        brown: {
+                            50: '#efebe9',
+                            100: '#d7ccc8',
+                            200: '#bcaaa4',
+                            300: '#a1887f',
+                            400: '#8d6e63',
+                            500: '#795548',
+                            600: '#6d4c41',
+                            700: '#5d4037',
+                            800: '#4e342e',
+                            900: '#3e2723',
+                        },
+                    },
+                }
+            }
+        }
+        
+    </script>
+
 </head>
+
 <body>
+
     <header class="p-4 dark:bg-gray-800 dark:text-gray-100">
         <div class="container flex justify-between h-16 mx-auto">
             <a rel="noopener noreferrer" href="#" aria-label="Back to homepage" class="flex items-center p-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" class="w-8 h-8 dark:text-violet-400">
-                    <path d="M27.912 7.289l-10.324-5.961c-0.455-0.268-1.002-0.425-1.588-0.425s-1.133 0.158-1.604 0.433l0.015-0.008-10.324 5.961c-0.955 0.561-1.586 1.582-1.588 2.75v11.922c0.002 1.168 0.635 2.189 1.574 2.742l0.016 0.008 10.322 5.961c0.455 0.267 1.004 0.425 1.59 0.425 0.584 0 1.131-0.158 1.602-0.433l-0.014 0.008 10.322-5.961c0.955-0.561 1.586-1.582 1.588-2.75v-11.922c-0.002-1.168-0.633-2.189-1.573-2.742zM27.383 21.961c0 0.389-0.211 0.73-0.526 0.914l-0.004 0.002-10.324 5.961c-0.152 0.088-0.334 0.142-0.53 0.142s-0.377-0.053-0.535-0.145l0.005 0.002-10.324-5.961c-0.319-0.186-0.529-0.527-0.529-0.916v-11.922c0-0.389 0.211-0.73 0.526-0.914l0.004-0.002 10.324-5.961c0.152-0.090 0.334-0.143 0.53-0.143s0.377 0.053 0.535 0.144l-0.006-0.002 10.324 5.961c0.319 0.185 0.529 0.527 0.529 0.916z"></path>
-                    <path d="M22.094 19.451h-0.758c-0.188 0-0.363 0.049-0.515 0.135l0.006-0.004-4.574 2.512-5.282-3.049v-6.082l5.282-3.051 4.576 2.504c0.146 0.082 0.323 0.131 0.508 0.131h0.758c0.293 0 0.529-0.239 0.529-0.531v-0.716c0-0.2-0.11-0.373-0.271-0.463l-0.004-0.002-5.078-2.777c-0.293-0.164-0.645-0.26-1.015-0.26-0.39 0-0.756 0.106-1.070 0.289l0.010-0.006-5.281 3.049c-0.636 0.375-1.056 1.055-1.059 1.834v6.082c0 0.779 0.422 1.461 1.049 1.828l0.009 0.006 5.281 3.049c0.305 0.178 0.67 0.284 1.061 0.284 0.373 0 0.723-0.098 1.027-0.265l-0.012 0.006 5.080-2.787c0.166-0.091 0.276-0.265 0.276-0.465v-0.716c0-0.293-0.238-0.529-0.529-0.529z"></path>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32"
+                    class="w-8 h-8 dark:text-violet-400">
+                    <path
+                        d="M27.912 7.289l-10.324-5.961c-0.455-0.268-1.002-0.425-1.588-0.425s-1.133 0.158-1.604 0.433l0.015-0.008-10.324 5.961c-0.955 0.561-1.586 1.582-1.588 2.75v11.922c0.002 1.168 0.635 2.189 1.574 2.742l0.016 0.008 10.322 5.961c0.455 0.267 1.004 0.425 1.59 0.425 0.584 0 1.131-0.158 1.602-0.433l-0.014 0.008 10.322-5.961c0.955-0.561 1.586-1.582 1.588-2.75v-11.922c-0.002-1.168-0.633-2.189-1.573-2.742zM27.383 21.961c0 0.389-0.211 0.73-0.526 0.914l-0.004 0.002-10.324 5.961c-0.152 0.088-0.334 0.142-0.53 0.142s-0.377-0.053-0.535-0.145l0.005 0.002-10.324-5.961c-0.319-0.186-0.529-0.527-0.529-0.916v-11.922c0-0.389 0.211-0.73 0.526-0.914l0.004-0.002 10.324-5.961c0.152-0.090 0.334-0.143 0.53-0.143s0.377 0.053 0.535 0.144l-0.006-0.002 10.324 5.961c0.319 0.185 0.529 0.527 0.529 0.916z">
+                    </path>
+                    <path
+                        d="M22.094 19.451h-0.758c-0.188 0-0.363 0.049-0.515 0.135l0.006-0.004-4.574 2.512-5.282-3.049v-6.082l5.282-3.051 4.576 2.504c0.146 0.082 0.323 0.131 0.508 0.131h0.758c0.293 0 0.529-0.239 0.529-0.531v-0.716c0-0.2-0.11-0.373-0.271-0.463l-0.004-0.002-5.078-2.777c-0.293-0.164-0.645-0.26-1.015-0.26-0.39 0-0.756 0.106-1.070 0.289l0.010-0.006-5.281 3.049c-0.636 0.375-1.056 1.055-1.059 1.834v6.082c0 0.779 0.422 1.461 1.049 1.828l0.009 0.006 5.281 3.049c0.305 0.178 0.67 0.284 1.061 0.284 0.373 0 0.723-0.098 1.027-0.265l-0.012 0.006 5.080-2.787c0.166-0.091 0.276-0.265 0.276-0.465v-0.716c0-0.293-0.238-0.529-0.529-0.529z">
+                    </path>
                 </svg>
             </a>
             <ul class="items-stretch hidden space-x-3 lg:flex">
                 <li class="flex">
-                    <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent dark:text-violet-400 dark:border-violet-400">Link</a>
+                    <a rel="noopener noreferrer" href="index.html"
+                        class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent dark:text-violet-400 dark:border-violet-400">A
+                        cerca de</a>
                 </li>
                 <li class="flex">
-                    <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Link</a>
+                    <a rel="noopener noreferrer" href="#"
+                        class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">planes</a>
                 </li>
                 <li class="flex">
-                    <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Link</a>
+                    <a rel="noopener noreferrer" href="#"
+                        class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Link</a>
                 </li>
                 <li class="flex">
-                    <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Link</a>
+                    <a rel="noopener noreferrer" href="#"
+                        class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Link</a>
                 </li>
             </ul>
             <div class="items-center flex-shrink-0 hidden lg:flex">
                 <button class="self-center px-8 py-3 rounded">Sign in</button>
-                <button class="self-center px-8 py-3 font-semibold rounded dark:bg-violet-400 dark:text-gray-900">Sign up</button>
+
+                <button class="self-center px-8 py-3 font-semibold rounded dark:bg-violet-400 dark:text-gray-900">Sign
+                    up</button>
             </div>
             <button class="p-4 lg:hidden">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 dark:text-gray-100">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    class="w-6 h-6 dark:text-gray-100">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
                 </svg>
             </button>
         </div>
     </header>
-    
+
+    <section>
+        <div class="p-6 py-12 bg-red-200 text-gray-900">
+            <div class="container mx-auto">
+                <div class="flex flex-col lg:flex-row items-center justify-between">
+                    <h2 class="text-center text-6xl tracki font-bold">Up to
+                        <br class="sm:hidden">100% Off
+                    </h2>
+                    <div class="space-x-2 text-center py-2 lg:py-0">
+                        <span>Plus free shipping! Use code:</span>
+                        <span class="font-bold text-lg">prueba</span>
+                    </div>
+                    <a href="#" rel="noreferrer noopener"
+                        class="px-5 mt-4 lg:mt-0 py-3 rounded-md border block dark:bg-gray-50 dark:text-gray-900 dark:border-gray-400">Shop
+                        Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 </body>
+
 </html>
